@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayoutBackground"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text= "Last updated"
+                android:layout_marginTop="8dp"
+                android:id="@+id/textViewCurrentLastUpdated"/>
+            <RelativeLayout
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="35dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MAX"
+                    android:id="@+id/textViewCurrMaxMin"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9"
+                    android:textSize="90dp"
+                    android:id="@+id/textViewCurrTemp"
+                    android:layout_below="@+id/textViewCurrMaxMin"/>
+                <TextView
+                    android:layout_below="@+id/textViewCurrMaxMin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_toRightOf="@+id/textViewCurrTemp"
+                    android:text="C"
+                    android:textSize="50dp"
+                    android:id="@+id/textViewCurrTempUnit"/>
+                <TextView
+                    android:id="@+id/textViewCurrFeelsLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feels Like"
+                    android:layout_below="@id/textViewCurrTempUnit"
+                    android:layout_toRightOf="@id/textViewCurrTemp"
+                    android:layout_marginTop="15dp"/>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="35dp"
+                android:layout_alignParentRight="true">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageViewCurrentIcon"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@mipmap/ic_launcher"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/imageViewCurrentIcon"
+                    android:id="@+id/textViewCurrentDesc"
+                    android:layout_centerHorizontal="true"
+                    android:text="abc"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerHourly">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</layout>
